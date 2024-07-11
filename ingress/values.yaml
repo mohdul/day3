@@ -540,7 +540,11 @@ controller:
       # -- Annotations to be added to the internal controller service. Mandatory for the internal controller service to be created. Varies with the cloud service.
       # Ref: https://kubernetes.io/docs/concepts/services-networking/service/#internal-load-balancer
       annotations: 
-        external-dns.alpha.kubernetes.io/access: "private"
+
+        service.beta.kubernetes.io/do-loadbalancer-enable-proxy-protocol: "true"
+        service.beta.kubernetes.io/do-loadbalancer-hostname: "internal-lb.yourdomain.com"
+        service.beta.kubernetes.io/do-loadbalancer-name: "internal-harness-cd-service2"
+        service.beta.kubernetes.io/do-loadbalancer-scope: "private"
       #{}
       # -- Type of the internal controller service.
       # Defaults to the value of `controller.service.type`.
