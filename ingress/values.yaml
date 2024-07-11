@@ -456,7 +456,7 @@ controller:
     enabled: true
     external:
       # -- Enable the external controller service or not. Useful for internal-only deployments.
-      enabled: false
+      enabled: true
     # -- Annotations to be added to the external controller service. See `controller.service.internal.annotations` for annotations to be added to the internal controller service.
     annotations: {}
     # -- Labels to be added to both controller services.
