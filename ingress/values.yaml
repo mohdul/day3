@@ -541,10 +541,6 @@ controller:
       # Ref: https://kubernetes.io/docs/concepts/services-networking/service/#internal-load-balancer
       annotations: 
 
-        service.beta.kubernetes.io/do-loadbalancer-enable-proxy-protocol: "true"
-        service.beta.kubernetes.io/do-loadbalancer-hostname: "internal-lb.yourdomain.com"
-        service.beta.kubernetes.io/do-loadbalancer-name: "internal-harness-cd-service2"
-        service.beta.kubernetes.io/do-loadbalancer-scope: "private"
       #{}
       # -- Type of the internal controller service.
       # Defaults to the value of `controller.service.type`.
